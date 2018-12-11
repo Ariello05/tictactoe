@@ -1,3 +1,6 @@
+//Project was initially created with usage of visual studio templates
+
+
 ========================================================================
     CONSOLE APPLICATION : SFMLProject nr.1 Project Overview
 ========================================================================
