@@ -1,7 +1,7 @@
-#include "Restart.h"
+#include "Exit.h"
+#include "Board.h"
 
-
-Restart::Restart(sf::Vector2f position, sf::Vector2f size)
+Exit::Exit(sf::Vector2f position, sf::Vector2f size)
 {
 	rect.setPosition(position);
 	rect.setSize(size);
@@ -13,26 +13,28 @@ Restart::Restart(sf::Vector2f position, sf::Vector2f size)
 
 	text.setFont(font);
 	text.setColor(sf::Color::Black);
-	text.setString("Restart");
+	text.setString("Exit");
 	text.setScale(sf::Vector2f(0.9f, 1.0f));
 	text.setPosition(sf::Vector2f(position.x + 5, position.y + 5));
+
 }
 
-
-Restart::~Restart()
+Exit::~Exit()
 {
+
 }
 
-void Restart::draw(sf::RenderWindow & window)
+void Exit::draw(sf::RenderWindow & window)
 {
 	window.draw(rect);
 	window.draw(text);
 }
 
-void Restart::click(sf::Vector2f position, Board & Board)
+void Exit::click(sf::Vector2f position, Board & Board)
 {
 	if (rect.getGlobalBounds().contains(position))
 	{
-		Board.reset();
+		Board.end();
 	}
 }
+

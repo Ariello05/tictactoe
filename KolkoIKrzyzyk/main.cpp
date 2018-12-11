@@ -1,33 +1,33 @@
 #include <SFML/Graphics.hpp>
-#include "Plansza.h"
+#include "Board.h"
 
 int main()
 {
-	sf::RenderWindow okno(sf::VideoMode(400, 230), "Kolko_I_Krzyzk");
+	sf::RenderWindow window(sf::VideoMode(400, 230), "TicTacToe");
 
-	Plansza plansza;
+	Board board;
 	
-	while (okno.isOpen())
+	while (window.isOpen())
 	{
 		sf::Event event;
-		while (okno.pollEvent(event))
+		while (window.pollEvent(event))
 		{
 			if (event.type == sf::Event::Closed)
-				okno.close();
+				window.close();
 			if (event.type == sf::Event::MouseButtonPressed)
 			{
 				if (event.mouseButton.button == sf::Mouse::Left)
 				{
-					sf::Vector2i position = sf::Mouse::getPosition(okno);
-					plansza.aktualizuj(sf::Vector2f(position.x, position.y));
+					sf::Vector2i position = sf::Mouse::getPosition(window);
+					board.update(sf::Vector2f(position.x, position.y));
 				}
 			}
 		}
 
 
-		okno.clear(sf::Color::White);
-		plansza.rys_plansza(okno);
-		okno.display();
+		window.clear(sf::Color::White);
+		board.draw_board(window);
+		window.display();
 	}
 
 	return 0;

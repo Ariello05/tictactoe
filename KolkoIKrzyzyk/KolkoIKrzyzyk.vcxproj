@@ -24,6 +24,7 @@
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>KolkoIKrzyzyk</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.14393.0</WindowsTargetPlatformVersion>
+    <ProjectName>TicTacToe</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -143,24 +144,21 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <Text Include="ReadMe.txt" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="Komorka.cpp" />
+    <ClCompile Include="Cell.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="Plansza.cpp" />
-    <ClCompile Include="Pole.cpp" />
+    <ClCompile Include="Board.cpp" />
+    <ClCompile Include="Field.cpp" />
     <ClCompile Include="Restart.cpp" />
-    <ClCompile Include="Tura.cpp" />
-    <ClCompile Include="Wyjscie.cpp" />
+    <ClCompile Include="Turn.cpp" />
+    <ClCompile Include="Exit.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Komorka.h" />
-    <ClInclude Include="Plansza.h" />
-    <ClInclude Include="Pole.h" />
+    <ClInclude Include="Cell.h" />
+    <ClInclude Include="Board.h" />
+    <ClInclude Include="Field.h" />
     <ClInclude Include="Restart.h" />
-    <ClInclude Include="Tura.h" />
-    <ClInclude Include="Wyjscie.h" />
+    <ClInclude Include="Turn.h" />
+    <ClInclude Include="Exit.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

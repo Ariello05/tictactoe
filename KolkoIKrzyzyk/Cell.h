@@ -1,18 +1,19 @@
 #pragma once
 #include "Field.h"
-class Restart :public Field
+#include "Board.h"
+
+class Cell :public Field
 {
 public:
-	Restart(sf::Vector2f position, sf::Vector2f size);
-	~Restart();
+	Cell(sf::Vector2f position, sf::Vector2f size);
+	~Cell();
 
 	virtual void draw(sf::RenderWindow & window);
 	virtual void click(sf::Vector2f position, Board & board);
 
 private:
 	sf::RectangleShape rect;
-	sf::Text text;
-	sf::Font font;
-
+	sf::RectangleShape lines[2];
+	sf::CircleShape circle;
 };
 
