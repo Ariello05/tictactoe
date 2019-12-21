@@ -7,13 +7,18 @@ Below steps will help you setup the project
 
 ### Prerequisites
 
-1. download SFML lib
-2. ...
+* Download [SFML](https://www.sfml-dev.org/) library
+
 
 ### Installing
 
+* Link SFML with project statically or dynamically
+* Put .dll from SFML version you downloaded into working folder or use the ones from this repository 
+* Build and compile project
+
 ## Usage
-Simply run .exe after compiling
+
+* Make sure you have .dll files in the folder where .exe is (unless you have linked SFML statically) 
 
 ## Built With
 
